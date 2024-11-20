@@ -80,7 +80,6 @@ body{
     width: 100%;
     position: relative;
 }
-
 /* ----- Navigation Bar ----- */
 nav {
     position: fixed;
@@ -99,6 +98,19 @@ nav {
     position: relative;
 }
 
+.container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.item2 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.image2 {
+    margin-right: 10px;
+}
 .nav-name {
     font-size: 30px;
     font-weight: 600;
@@ -243,7 +255,7 @@ nav {
 .icon:hover {
     color: var(--first-color);
 }
-
+.container
 /* ----- Featured Image Box ----- */
 .featured-image {
     display: flex;
