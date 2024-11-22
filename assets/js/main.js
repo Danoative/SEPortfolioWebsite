@@ -32,9 +32,9 @@
 
 /* ----- TYPING EFFECT ----- */
     var typingEffect = new Typed(".typedText", {
-        strings: ["Real-time Weather Forecast Webiste"],
+        strings: [""],
         loop: false,
-        typeSpeed: 85,
+        typeSpeed: 1,
         backSpeed: 60,
         backDelay: 2000
     })
