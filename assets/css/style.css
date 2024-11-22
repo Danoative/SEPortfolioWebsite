@@ -20,7 +20,7 @@
 
 /* ----- Base ----- */
 * {
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -51,8 +51,17 @@ html {
 /* ----- Global Button Design ----- */
 .btn {
     font-weight: 500;
-    padding: 12px 20px;
-    background: #efefef;
+    padding: 12px 35px;
+    background: rgb(83, 175, 236);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+}
+.btn1 {
+    font-weight: 500;
+    padding: 12px 35px;
+    background: rgb(0, 129, 168);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -257,15 +266,15 @@ nav {
     margin: auto 0;
     width: 380px;
     height: 380px;
-    border-radius: 55% 45% 55% 45%;
+    /* border-radius: 55% 45% 55% 45%; */
     overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
+    /* animation: imgFloat 7s ease-in-out infinite; */
 }
 
 .image img{
     width: 380px;
     height: 380px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @keyframes imgFloat {
@@ -718,12 +727,35 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    
 }
 .item2 {
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 0px; /* Align content vertically */
+    align-items: center;
+    gap: 0.2rem; /* Space between image and text */
+    background-color: #ffffff; /* Optional background */
+    border: 1px solid #000000; /* Optional border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 0.5rem; /* Spacing inside the item */
 }
+
 .image2 {
-    margin-right: 10px;
+    flex-shrink: 0;
+    margin-right: 0px;
+    width: 50px;
+    height: 50px;
+    border-radius: 80%;
+}
+.item2 > div,
+.item2 > p {
+    flex-grow: 1; /* Allow content to take up remaining space */
+    text-align: left; /* Align content to the left */
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 2fr)); /* Auto-adjust columns */
+    gap: 4rem; /* Space between grid items */
+    padding: 2.2rem; /* Optional padding around the grid */
 }
