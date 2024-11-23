@@ -38,13 +38,13 @@
                     <div class="circle"></div>
                 </li>
                 <li class="nav_list">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link">Our Group</a>
                     <div class="circle"></div>
                 </li>
             </ul>
         </div>
         <div class="nav-button">
-            <button class="btn">Login</button>
+            <button class="btn" id="form-open">Login</button>
         </div>
         <div class="nav-menu-btn">
             <i class="uil uil-bars" onclick="myMenuFunction()"></i>
@@ -54,14 +54,71 @@
 
     <!-- MAIN -->
         <main class="wrapper">
-            <!-- FEATURED BOX -->
-            <section class="featured-box" id="home">
+            <!-- HOME BOX -->
+            <section class="home" id="home">
+                <div class="form_container">
+                    <i class="uil uil-times form_close"></i>
+                    <!-- LOGIN FORM -->
+                    <div class="form login_form">
+                        <form action="#">
+                            <h2>Login</h2>
+
+                            <div class="input_box">
+                                <input type="text" placeholder="Enter Username" required/>
+                                <i class="uil uil-user user"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Enter Password" required/>
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <div class="option_field">
+                                <span class="checkbox">
+                                    <input type="checkbox" id="check">
+                                    <label for="check">Remember me</label>
+                                </span>
+                                <a href="#" class="forgot_pw">Forgot password?</a>
+                            </div>
+
+                            <button class="button">Login</button>
+
+                            <div class="login_signup"> Don't have an account? <a href="#" id="signup">Signup</a></div>
+                        </form>
+                    </div>
+                    <!-- SIGNUP FORM -->
+                    <div class="form signup_form">
+                        <form action="#">
+                            <h2>Signup</h2>
+
+                            <div class="input_box">
+                                <input type="text" placeholder="Enter Username" required/>
+                                <i class="uil uil-user user"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Create Password" required/>
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+                            <div class="input_box">
+                                <input type="password" placeholder="Confirm Password" required/>
+                                <i class="uil uil-lock password"></i>
+                                <i class="uil uil-eye-slash pw_hide"></i>
+                            </div>
+
+                            <button class="button">Signup</button>
+
+                            <div class="login_signup"> Already have an account? <a href="#" id="login">Login</a></div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="featured-text">
                     <div class="featured-text-card">
                         <!-- <span>Quackle the Duck</span> -->
                     </div>
                     <div class="featured-name">
-                        <p><span>Real-Time Weather Forecast</span></p>
+                        <p> <span>Real-Time Weather Forecast</span></p>
                     </div>
                     <div class="featured-text-info">
                         <p>
@@ -70,7 +127,8 @@
                         </p>
                     </div>
                     <div class="featured-text-btn">
-                        <button class="btn green-btn">Login</button>
+
+                        <button class="btn form-open-btn">Login</button>
                         <button class="btn1">Sign Up</button>
                     </div>
                 </div>
@@ -83,16 +141,16 @@
             <!-- ABOUT BOX -->
             <section class="section" id="about">
                 <div class="top-header">
-                    <h1>About The Website</h1>
+                    <h3>About The Website</h3>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="about-info">
                             <h3>Description</h3>
-                            <p> 
-                            Our Website delivers accurate weather forecasts with real-time updates,
-                            detailed daily insights, and interactive maps. 
-                            Stay informed with personalized alerts and a seamless experience across all devices—your reliable weather companion! 
+                            <p> Our Website delivers accurate weather forecasts with real-time updates,
+                                detailed daily insights, and interactive maps. 
+                                Stay informed with personalized alerts and a seamless experience across all
+                                devices your reliable weather companion! 
                             </p>
                             <!-- <div class="about-btn">
                                 <button class="btn">Login <i class="uil uil-file-alt"></i></button>
@@ -132,28 +190,28 @@
             </section>
 
             <!-- PROJECT BOX -->
-            <section class="section" id="features">
+            <section class="section" id="projects">
                 <div class="top-header">
                     <h1>Our Website Features</h1>
                 </div>
                 <div class="project-container">
                     <div class="project-box">
                         <i class="uil uil-briefcase-alt"></i>
-                        <label>Real-time weather data</label>
+                        <h3>Real-time weather data</h3>
                     </div>
                     <div class="project-box">
                         <i class="uil uil-users-alt"></i>
-                        <label>Search functionality</label>
+                        <h3>Search functionality</h3>
                     </div>
                     <div class="project-box">
                         <i class="uil uil-award"></i>
-                        <label>Future weather prediction</label>
+                        <h3>Future weather prediction</h3>
                     </div>
                 </div>
             </section>
             
             <!-- CONTACT BOX -->
-            <section class="section" id="contact">
+            <section class="section" id="Our Group">
                 <div class="top-header">
                     <h1>Our Group</h1>
                     <span>Below is our Group Members Details</span>
@@ -217,10 +275,11 @@
             </section>
         </main>
 
+
     <!-- FOOTER -->
     <footer>
         <div class="top-footer">
-            <!-- <p>Quackle the Duck .</p> -->
+            <p>Real-time Weather Forecast by Group 2</p>
         </div>
         <div class="middle-footer">
             <ul class="footer-menu">
@@ -234,12 +293,12 @@
                     <a href="#features">Features</a>
                 </li>
                 <li class="footer_menu_list">
-                    <a href="#contact">Contact</a>
+                    <a href="#our group">Our Group</a>
                 </li>
             </ul>
         </div>
         <div class="bottom-footer">
-            <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Quackle the Duck - All right reserved</a></p>
+            <p><a href="#our group" style="text-decoration: none;">Group 2 Software Engineering</a></p>
         </div>
     </footer>
 
@@ -257,4 +316,4 @@
     <!-- MAIN JS -->
     <script src="assets/js/main.js"></script>
 </body>
-</html>
+</html> 
