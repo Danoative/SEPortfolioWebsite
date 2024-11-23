@@ -31,13 +31,13 @@
 
 
 /* ----- TYPING EFFECT ----- */
-    var typingEffect = new Typed(".typedText", {
-        strings: [""],
-        loop: false,
-        typeSpeed: 1,
-        backSpeed: 60,
-        backDelay: 2000
-    })
+    // var typingEffect = new Typed(".typedText", {
+    //     strings: [""],
+    //     loop: false,
+    //     typeSpeed: 1,
+    //     backSpeed: 60,
+    //     backDelay: 2000
+    // })
 
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */

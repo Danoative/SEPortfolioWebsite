@@ -20,7 +20,7 @@
 
 /* ----- Base ----- */
 * {
-    margin: auto;
+    margin: none;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
@@ -111,7 +111,7 @@ nav {
 .nav-name {
     font-size: 30px;
     font-weight: 600;
-    color: var(--text-color-third);
+    color: --text-color-third;
 }
 
 .nav-logo span {
