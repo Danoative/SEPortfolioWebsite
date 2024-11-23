@@ -183,7 +183,7 @@ nav {
     min-height: 700px;
 }
 
-.home::before {
+/* .home::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -193,7 +193,7 @@ nav {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease-out;
-}
+} */
 
 .home.show::before {
     opacity: 1;
@@ -203,15 +203,16 @@ nav {
 
 /* ----- Form Login and Register ----- */
 .form_container {
-    position: absolute;
+    position: fixed;
     max-width: 320px;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.2);
     z-index: 101;
-    background: #fff;
+    backdrop-filter: blur(20px);
     padding: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -269,6 +270,7 @@ nav {
     color: #333;
     transition: all 0.2s ease;
     border-bottom: 1.5px solid #AAAAAA;
+    background: transparent;
 }
 
 .input_box input:focus {
@@ -347,6 +349,7 @@ input[type=password]::-ms-clear
     padding: 10px 0;
     border-radius: 10px;
     color: var(--color-white);
+    border: 2px solid;
 }
 
 .login_signup {
@@ -443,15 +446,15 @@ input[type=password]::-ms-clear
     margin: auto 0;
     width: 380px;
     height: 380px;
-    border-radius: 55% 45% 55% 45%;
+    /* border-radius: 55% 45% 55% 45%; */
     overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
+    /* animation: imgFloat 7s ease-in-out infinite; */
 }
 
 .image img{
     width: 380px;
     height: 380px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @keyframes imgFloat {
@@ -646,19 +649,23 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
-    width: 100%;
-    height: 315px;
+    padding: 30px 30px;
+    width: 30%;
     background: var(--second-color);
     border-radius: 10px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+    gap: 10px;
+    text-align: center;
 }
+
+
 
 .contact-info > h2 {
     color: var(--color-white);
     margin-bottom: 20px;
 }
+
 
 .contact-info > p {
     display: flex;
@@ -681,6 +688,14 @@ h3 {
 .contact-info:hover.contact-info i {
     color: #777;
     z-index: 2;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* ----- Contact Form ----- */
@@ -735,6 +750,19 @@ textarea {
     rotate: -45deg;
 }
 
+.image2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make the image a circle */
+    margin-bottom: 10px; /* Add some space between the image and the text */
+}
+
+.contact-info .image2 {
+    display: block;
+    margin: auto;
+    z-index: 2;
+}
+
 /* ----- Footer Box ----- */
 footer {
     display: flex;
@@ -785,6 +813,13 @@ footer {
     .image, .image img {
         width: 320px;
         height: 320px;
+    }
+
+    .contact-container {
+        flex-wrap: wrap;
+    }
+    .contact-info {
+        width: 45%;
     }
 }
 
@@ -879,6 +914,14 @@ footer {
     .project-box {
         width: 80%;
     }
+
+    .contact-container {
+        justify-content: center;
+    }
+
+    .contact-info {
+        width: 75%;
+    }
 }
 
 
@@ -898,5 +941,13 @@ footer {
 
     .input-field {
         width: 100%;
+    }
+
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-container {
+        justify-content: center;
     }
 }

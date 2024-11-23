@@ -51,17 +51,8 @@ html {
 /* ----- Global Button Design ----- */
 .btn {
     font-weight: 500;
-    padding: 12px 35px;
-    background: rgb(83, 175, 236);
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: .4s;
-}
-.btn1 {
-    font-weight: 500;
-    padding: 12px 35px;
-    background: rgb(0, 129, 168);
+    padding: 12px 20px;
+    background: #efefef;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -170,7 +161,7 @@ nav {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -8px;
+    bottom: -15px;
     transform: translate(-50%, -50%);
     width: 5px;
     height: 5px;
@@ -192,7 +183,7 @@ nav {
     min-height: 700px;
 }
 
-.home::before {
+/* .home::before {
     content: '';
     position: absolute;
     height: 100%;
@@ -202,7 +193,7 @@ nav {
     opacity: 0;
     pointer-events: none;
     transition: all 0.5s ease-out;
-}
+} */
 
 .home.show::before {
     opacity: 1;
@@ -212,15 +203,16 @@ nav {
 
 /* ----- Form Login and Register ----- */
 .form_container {
-    position: absolute;
+    position: fixed;
     max-width: 320px;
     width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1.2);
     z-index: 101;
-    background: #fff;
+    backdrop-filter: blur(20px);
     padding: 25px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     box-shadow: rgba(0, 0, 0, 0.1);
     opacity: 0;
@@ -278,6 +270,7 @@ nav {
     color: #333;
     transition: all 0.2s ease;
     border-bottom: 1.5px solid #AAAAAA;
+    background: transparent;
 }
 
 .input_box input:focus {
@@ -356,6 +349,7 @@ input[type=password]::-ms-clear
     padding: 10px 0;
     border-radius: 10px;
     color: var(--color-white);
+    border: 2px solid;
 }
 
 .login_signup {
@@ -452,15 +446,15 @@ input[type=password]::-ms-clear
     margin: auto 0;
     width: 380px;
     height: 380px;
-    border-radius: 55% 45% 55% 45%;
+    /* border-radius: 55% 45% 55% 45%; */
     overflow: hidden;
-    animation: imgFloat 7s ease-in-out infinite;
+    /* animation: imgFloat 7s ease-in-out infinite; */
 }
 
 .image img{
     width: 380px;
     height: 380px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 @keyframes imgFloat {
@@ -655,19 +649,23 @@ h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px 30px;
-    width: 100%;
-    height: 315px;
+    padding: 30px 30px;
+    width: 30%;
     background: var(--second-color);
     border-radius: 10px;
     box-shadow: 1px 8px 10px 2px var(--first-shadow-color);
     overflow: hidden;
+    gap: 10px;
+    text-align: center;
 }
+
+
 
 .contact-info > h2 {
     color: var(--color-white);
     margin-bottom: 20px;
 }
+
 
 .contact-info > p {
     display: flex;
@@ -690,6 +688,14 @@ h3 {
 .contact-info:hover.contact-info i {
     color: #777;
     z-index: 2;
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 /* ----- Contact Form ----- */
@@ -744,6 +750,19 @@ textarea {
     rotate: -45deg;
 }
 
+.image2 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Make the image a circle */
+    margin-bottom: 10px; /* Add some space between the image and the text */
+}
+
+.contact-info .image2 {
+    display: block;
+    margin: auto;
+    z-index: 2;
+}
+
 /* ----- Footer Box ----- */
 footer {
     display: flex;
@@ -794,6 +813,13 @@ footer {
     .image, .image img {
         width: 320px;
         height: 320px;
+    }
+
+    .contact-container {
+        flex-wrap: wrap;
+    }
+    .contact-info {
+        width: 45%;
     }
 }
 
@@ -888,6 +914,14 @@ footer {
     .project-box {
         width: 80%;
     }
+
+    .contact-container {
+        justify-content: center;
+    }
+
+    .contact-info {
+        width: 75%;
+    }
 }
 
 
@@ -908,40 +942,12 @@ footer {
     .input-field {
         width: 100%;
     }
-}
 
-/* ----- Grid ----- */
-.container2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-.item2 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 0px; /* Align content vertically */
-    align-items: center;
-    gap: 0.2rem; /* Space between image and text */
-    background-color: #ffffff; /* Optional background */
-    border: 1px solid #000000; /* Optional border */
-    border-radius: 5px; /* Rounded corners */
-    padding: 0.5rem; /* Spacing inside the item */
-}
-.image2 {
-    flex-shrink: 0;
-    margin-right: 0px;
-    width: 50px;
-    height: 50px;
-    border-radius: 80%;
-}
-.item2 > div,
-.item2 > p {
-    flex-grow: 1; /* Allow content to take up remaining space */
-    text-align: left; /* Align content to the left */
-}
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 2fr)); /* Auto-adjust columns */
-    gap: 4rem; /* Space between grid items */
-    padding: 2.2rem; /* Optional padding around the grid */
+    .contact-info {
+        width: 100%;
+    }
+
+    .contact-container {
+        justify-content: center;
+    }
 }
