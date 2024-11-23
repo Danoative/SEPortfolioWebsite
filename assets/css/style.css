@@ -170,7 +170,7 @@ nav {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -15px;
+    bottom: -8px;
     transform: translate(-50%, -50%);
     width: 5px;
     height: 5px;
