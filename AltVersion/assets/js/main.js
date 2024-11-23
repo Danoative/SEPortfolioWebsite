@@ -31,13 +31,13 @@
 
 
 /* ----- TYPING EFFECT ----- */
-    var typingEffect = new Typed(".typedText", {
-        strings: ["Real-time Weather Forecast Website"],
-        loop: false,
-        typeSpeed: 85,
-        backSpeed: 60,
-        backDelay: 2000
-    })
+    // var typingEffect = new Typed(".typedText", {
+    //     strings: ["Real-time Weather Forecast Website"],
+    //     loop: false,
+    //     typeSpeed: 85,
+    //     backSpeed: 60,
+    //     backDelay: 2000
+    // })
 
 
 /* ----- ## -- SCROLL REVEAL ANIMATION -- ## ----- */
@@ -110,6 +110,7 @@
 
 
 const formOpenBtn = document.querySelector("#form-open"),
+formOpenBtns = document.querySelectorAll(".form-open-btn"),
 home = document.querySelector(".home"),
 formContainer = document.querySelector(".form_container"),
 formCloseBtn = document.querySelector(".form_close"),
@@ -117,7 +118,10 @@ signupBtn = document.querySelector("#signup"),
 loginBtn = document.querySelector("#login"),
 pwShowHide = document.querySelectorAll(".pw_hide");
 
-formOpenBtn.addEventListener("click", () => home.classList.add("show"))
+// formOpenBtn.addEventListener("click", () => home.classList.add("show"))
+[formOpenBtn, ...formOpenBtns].forEach((btn) => {
+    btn.addEventListener("click", () => home.classList.add("show"));
+});
 formCloseBtn.addEventListener("click", () => home.classList.remove("show"))
 
 pwShowHide.forEach((icon) => {

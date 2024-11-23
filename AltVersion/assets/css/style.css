@@ -380,14 +380,14 @@ input[type=password]::-ms-clear
 .featured-name {
     font-size: 50px;
     font-weight: 600;
-    color: var(--text-color-second);
+    color: var(--text-color-third);
     margin-block: 20px;
 }
 
-.typedText {
+/* .typedText {
     text-transform: capitalize;
     color: var(--text-color-third);
-}
+} */
 
 .featured-text-info {
     font-size: 15px;
